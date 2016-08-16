@@ -1,0 +1,277 @@
+/* line 1, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+html {
+  height: 100%;
+}
+
+/* line 4, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #c5c5c5;
+  background-image: linear-gradient(#ffffff, #f7f7f7);
+}
+
+/* line 11, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 14, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content {
+  background-color: transparent;
+  background-image: linear-gradient(0deg, transparent 24%, rgba(25, 25, 25, 0.05) 25%, rgba(25, 25, 25, 0.05) 26%, transparent 27%, transparent 74%, rgba(25, 25, 25, 0.05) 75%, rgba(25, 25, 25, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(25, 25, 25, 0.05) 25%, rgba(25, 25, 25, 0.05) 26%, transparent 27%, transparent 74%, rgba(25, 25, 25, 0.05) 75%, rgba(25, 25, 25, 0.05) 76%, transparent 77%, transparent);
+  height: 100%;
+  background-size: 50px 50px;
+  padding-top: 150px;
+}
+
+/* line 20, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .section {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 20, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+  #content .section {
+    padding: 0px 10px;
+  }
+}
+
+/* line 28, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .section .header h1 {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 28, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+  #content .section .header h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* line 36, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .section .header .dropdown {
+  float: right;
+}
+
+/* line 41, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .row {
+  width: 100%;
+  background-color: #F0F0F0;
+  border: 1px solid #e1e1e8;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+/* line 49, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .api-path .info {
+  padding: 0.5em;
+}
+
+/* line 51, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .api-path .info .method {
+  font-weight: bold;
+}
+
+/* line 57, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .api-response .response-headers {
+  padding: 0.5em;
+}
+
+/* line 59, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .api-response .response-headers .status {
+  font-weight: bold;
+}
+
+/* line 63, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/style.scss */
+#content .api-response pre {
+  margin: 0;
+}
+
+/* line 1, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 5, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 2px;
+}
+
+/* line 13, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown .dropdown-menu .dropdown-menu-wrapper {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 17, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown .dropdown-menu .dropdown-menu-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown .dropdown-menu .dropdown-menu-wrapper ul a {
+  display: block;
+  padding: 0.2em 0.8em;
+  text-decoration: none;
+  background: #fff;
+  color: #333333;
+  cursor: pointer;
+}
+
+/* line 28, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown .dropdown-menu .dropdown-menu-wrapper ul a:hover {
+  background: #BBBBBB;
+}
+
+/* line 35, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* line 38, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown button {
+  background: #3e8acc;
+  color: #FFFFFF;
+  border: 1px solid #2c70ab;
+  margin: 0;
+  cursor: pointer;
+  padding: 0.6em 1.8em 0.8em 0.6em;
+  font-size: 1em;
+  border-radius: 4px;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 38, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+  .dropdown button {
+    padding: 0.4em 1.8em 0.4em 0.4em;
+  }
+}
+
+/* line 51, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown button .txt {
+  margin-right: 0.5em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 51, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+  .dropdown button .txt {
+    font-size: 0.9em;
+  }
+}
+
+/* line 58, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown button div {
+  width: 1.8em;
+  line-height: 2.2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 58, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+  .dropdown button div {
+    line-height: 1.8em;
+  }
+}
+
+/* line 69, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown button div .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* line 81, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_dropdown.scss */
+.dropdown button:hover div {
+  background-color: #2c70ab;
+  box-shadow: inset 0 0 0.2em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+/* line 2, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.tooltipwrapper .tooltip {
+  background: #000;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  transform: translateY(10px);
+  transition: all 0.25s ease-out;
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* line 29, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.tooltipwrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 38, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.tooltipwrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #000 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+/* line 51, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.tooltipwrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}
+
+/* line 61, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.lte8 .tooltip {
+  display: none;
+}
+
+/* line 64, /Users/jornovestokka/projects/TV2/tv2-apps/advertiser-list/app/assets/sass/_tooltip.scss */
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}

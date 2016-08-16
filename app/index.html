@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Advertiser List</title>
+   <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
+   <link href="css/style.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+   <script src="js/main.min.js"></script>
+</head>
+
+<body>
+   <div id="content">
+      <div class="section">
+         <!-- dropdown container -->
+         <div class="header">
+            <h1>Advertiser List</h1>
+            <div class="dropdown tooltipwrapper">
+               <div class="tooltip">Specify a format for the GET request</div>
+               <button class=""><span class="txt"></span>
+                  <div><span class="caret"></span></div>
+               </button>
+               <!-- dropdown menu -->
+               <div class="dropdown-menu">
+                  <div class="dropdown-menu-wrapper">
+                     <ul>
+
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+         </div>
+
+         <div class="row api-path">
+            <div class="info">
+               <span class="method">GET</span> /advertisers/?format=api
+            </div>
+         </div>
+         <div class="row api-response">
+            <div class="response-headers">
+               <div class="status"></div>
+               <div class="vary"></div>
+               <div class="allow"></div>
+               <div class="content-type"></div>
+            </div>
+            <pre><code id="code" class="json"></code></pre>
+         </div>
+      </div>
+   </div>
+
+
+</body>
+
+</html>
