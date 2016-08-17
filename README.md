@@ -30,4 +30,4 @@ If I got it right, this is very similar to a standard swagger rest-documentation
 http://www.mohammedovich.com/content/images/2015/10/swaggerui-example1.png
 
 The next step would probably be to load a config from the api, containing set of api methods with parameter descriptions - and let the user test them with custom data.
-In index.html, "<div class="section">" would have to be refactored as a template to be iterated over (the set of api methods).
+In index.html, &lt;div class=&quot;section&quot;&gt; would have to be refactored as a template to be iterated over (the set of api methods).
