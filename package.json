@@ -1,13 +1,12 @@
 {
   "name": "advertiser-list",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Showcase",
   "scripts": {
     "test": "gulp test",
     "devserver": "gulp serve:static & gulp"
   },
-  "author": "",
+  "author": "jns",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.13.2",

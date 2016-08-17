@@ -25,6 +25,7 @@
                 background: #fff;
                 color: #333333;
                 cursor: pointer;
+                //pointer-events: none;
                 &:hover {
                     background: #BBBBBB;
                 }
@@ -33,7 +34,11 @@
     }
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
+    //display: block;
+    &.display-menu{
+        display: block;
+    }
+
 }
 .dropdown button {
     background: #3e8acc;

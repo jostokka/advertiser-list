@@ -11,8 +11,9 @@ var gulp = require('gulp'),
    replace = require('gulp-replace'),
    gulpif = require('gulp-if');
 
+/* compile sass */
 gulp.task('sass', [], function() {
-   return gulp.src('./app/assets/sass/**/*.scss')
+   return gulp.src('./assets/sass/**/*.scss')
       .pipe(sass({
          sourceComments: true,
          outputStyle: 'expanded',
@@ -32,8 +33,9 @@ gulp.task('sass', [], function() {
       .pipe(gulp.dest('./app/css/'));
 });
 
+/* Bundle javascripts and make minfied version for use in prod */
 gulp.task('js', function() {
-   return gulp.src(['./app/assets/javascripts/*.js'])
+   return gulp.src(['./assets/javascripts/*.js'])
       .pipe(gp_concat('main.js'))
       .pipe(gulp.dest('./app/js/'))
       .pipe(gp_rename('main.min.js'))
@@ -41,7 +43,7 @@ gulp.task('js', function() {
       .pipe(gulp.dest('./app/js/'));
 });
 
-
+/* Start local webserver */
 gulp.task('serve:static', (done) => {
    browserSync({
       logLevel: 'silent',
@@ -55,21 +57,12 @@ gulp.task('serve:static', (done) => {
    }, done);
 });
 
-gulp.task('selenium1', (done) => {
-   selenium.install({
-      logger: console.log
-   }, () => {
-      selenium.start(done);
-   });
-});
-
+/* run selenium */
 gulp.task('selenium', function(done) {
    selenium.install({
       logger: function(message) {}
    }, function(err) {
       if (err) return done(err);
-      console.log('starting selenium')
-
       selenium.start(function(err, child) {
          if (err) return done(err);
          selenium.child = child;
@@ -78,6 +71,7 @@ gulp.task('selenium', function(done) {
    });
 });
 
+/* init selenium using wdio.config */
 gulp.task('integration', ['selenium'], function() {
    return gulp.src('wdio.conf.js')
       .pipe(webdriver()).on('error', () => {
@@ -87,17 +81,20 @@ gulp.task('integration', ['selenium'], function() {
       });
 });
 
-gulp.task('test', ['serve:static', 'integration'], function() {
+/* build fresh versions of assets and spawn local webserver / selenium tests */
+gulp.task('test', ['sass', 'js', 'serve:static', 'integration'], function() {
    selenium.child.kill();
    browserSync.exit();
 });
 
+/* Watch folders and trigger resource builds (sass and javascripts) */
 gulp.task('watch', function() {
-   gulp.watch('app/assets/javascripts/**/*.js', ['js']);
-   gulp.watch('app/assets/sass/**/*.scss', ['sass']);
+   gulp.watch('assets/javascripts/**/*.js', ['js']);
+   gulp.watch('assets/sass/**/*.scss', ['sass']);
 
 });
 
+/* Default task, development only */
 gulp.task('default', ['sass', 'js', 'watch'], function() {
 
 });
